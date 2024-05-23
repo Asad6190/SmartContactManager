@@ -13,6 +13,8 @@ import java.util.Random;
 @Controller
 public class ForgotController {
 
+    // We wanted to send OTP to Email Address but due to Gmail's new policy we can not access the less secure apps.
+
     Random random = new Random(1000);
 
     @Autowired
@@ -36,7 +38,7 @@ public class ForgotController {
 
         System.out.println("OTP: " + otp);
 
-        //write code for send otp to email
+        //write code for send otp to emailgit
         String subject = "OTP From SCM";
         String message = "<h1> OTP = " + otp + " </h1> ";
         String to = email;
